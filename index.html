@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Kỹ Sư Điện Chuyên Nghiệp</title>
+    <style>
+        /* --- 1. RESET & CẤU HÌNH CHUNG (ƯU TIÊN MOBILE) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Xóa viền xanh khi chạm trên phone */
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f6f9;
+            font-size: 15px; /* Kích thước chữ vừa vặn trên màn hình nhỏ */
+        }
+
+        /* --- 2. THANH ĐIỀU HƯỚNG MOBILE --- */
+        header {
+            background-color: #1a365d;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column; /* Xếp dọc trên mobile */
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff9800;
+            margin-bottom: 8px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 8px;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 5px 10px; /* Tăng vùng chạm cho ngón tay */
+        }
+
+        /* --- 3. BANNER CHÍNH (HERO) --- */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: #fff;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-top: 80px; /* Tránh bị che bởi thanh điều hướng */
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Nút bấm to, dễ chạm trên điện thoại */
+        .btn {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 30px; /* Bo tròn hiện đại */
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            font-size: 1rem;
+        }
+
+        /* --- 4. BỐ CỤC NỘI DUNG --- */
+        section {
+            padding: 40px 15px; /* Thu hẹp khoảng cách lề trên mobile */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a365d;
+            font-size: 1.6rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #ff9800;
+            margin: 8px auto 0;
+        }
+
+        /* Danh sách dịch vụ xếp dọc trên mobile */
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #1a365d; /* Đổi sang viền bên trái để hợp với màn hình dọc */
+        }
+
+        .service-card h3 {
+            margin-bottom: 8px;
+            color: #1a365d;
+            font-size: 1.2rem;
+        }
+
+        /* Khối liên hệ xếp dọc */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #eee; /* Thêm đường gạch chân cho dễ nhìn */
+            padding-bottom: 8px;
+        }
+
+        .contact-info p:last-child {
+            border-bottom: none;
+        }
+
+        /* Nút gọi nhanh nổi bật */
+        .btn-call-now {
+            display: block;
+            background-color: #2ab7ca;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* Form nhập liệu trên mobile */
+        .contact-form {
+            background-color: #fff;
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .contact-form fieldset {
+            border: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px; /* Ô nhập rộng hơn để dễ gõ bằn bàn phím ảo */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem; /* Ngăn iOS tự động zoom màn hình khi bấm vào ô nhập */
+        }
+
+        .btn-submit {
+            background-color: #1a365d;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #1a365d;
+            color: #fff;
+            text-align: center;
+            padding: 20px 15px;
+            font-size: 0.85rem;
+        }
+
+        /* --- 5. TỰ ĐỘNG ĐỔI BỐ CỤC KHI LÊN MÀN HÌNH MÁY TÍNH (PC / TABLET) --- */
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 15px 20px;
+            }
+
+            .logo {
+                margin-bottom: 0;
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                width: auto;
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+                margin-index: 0;
+            }
+
+            .hero {
+                height: 60vh;
+                margin-top: 60px;
+                padding: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .service-card {
+                border-left: none;
+                border-top: 4px solid #1a365d;
+                text-align: center;
+            }
+
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh điều hướng -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">⚡ Điện Kỹ Thuật Pro</div>
+            <ul class="nav-links">
+                <li><a href="#gioi-thieu">Giới Thiệu</a></li>
+                <li><a href="#dich-vu">Dịch Vụ</a></li>
+                <li><a href="#lien-he">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Khối Banner chính -->
+    <section class="hero">
+        <h1>Dịch Vụ Kỹ Sư Điện<br>Chuyên Nghiệp</h1>
+        <p>An toàn - Uy tín - Giải pháp tối ưu cho bạn.</p>
+        <a href="#lien-he" class="btn">Liên Hệ Ngay</a>
+    </section>
+
+    <!-- Khối Giới thiệu -->
+    <section id="gioi-thieu">
+        <h2 class="section-title">Về Chúng Tôi</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555;">
+            Chúng tôi là đội ngũ kỹ sư điện có nhiều năm kinh nghiệm chuyên tư vấn, thiết kế, thi công và sửa chữa các hệ thống điện dân dụng, công nghiệp. Cam kết an toàn tuyệt đối và tiết kiệm chi phí tối đa.
+        </p>
+    </section>
+
+    <!-- Khối Dịch vụ -->
+    <section id="dich-vu" style="background-color: #eef2f5;">
+        <h2 class="section-title">Dịch Vụ</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Tư Vấn & Thiết Kế</h3>
+                <p>Thiết kế bản vẽ sơ đồ nguyên lý, hệ thống điện cho nhà ở, văn phòng, nhà xưởng đúng tiêu chuẩn.</p>
+            </div>
+            <div class="service-card">
+                <h3>Thi Công & Lắp Đặt</h3>
+                <p>Lắp đặt tủ điện, hệ thống chiếu sáng, đi dây điện âm tường, thiết bị điện thông minh nhanh chóng.</p>
+            </div>
+            <div class="service-card">
+                <h3>Sửa Chữa & Bảo Trì</h3>
+                <p>Khắc phục nhanh sự cố chập cháy, rò rỉ điện. Bảo trì định kỳ hệ thống điện vận hành ổn định.</p>
