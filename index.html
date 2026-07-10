@@ -1,467 +1,430 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dịch Vụ Kỹ Thuật Điện Chuyên Nghiệp</title>
-    <style>
-        /* --- 1. RESET & CẤU HÌNH CHUNG (ƯU TIÊN MOBILE) --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dịch Vụ Kỹ Thuật Điện Chuyên Nghiệp - Điện Kỹ Thuật Pro</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #f8fafc;
+    }
 
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f6f9;
-            font-size: 15px;
-        }
+    /* Header & Navigation */
+    header {
+      background-color: #1a365d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .logo {
+      color: #ff9800;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+      color: #ff9800;
+    }
 
-        /* --- 2. THANH ĐIỀU HƯỚNG MOBILE (MENU) --- */
-        header {
-            background-color: #1a365d;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200') no-repeat center center/cover;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #e2e8f0;
+    }
+    .btn-cta {
+      display: inline-block;
+      background-color: #ff9800;
+      color: #ffffff;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn-cta:hover {
+      background-color: #e68a00;
+    }
 
-        .navbar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-        }
+    /* Global Section Layout */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      color: #1a365d;
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .title-line {
+      width: 50px;
+      height: 3px;
+      background-color: #ff9800;
+      margin: 0 auto 35px auto;
+    }
 
-        .logo {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ff9800;
-            margin-bottom: 8px;
-        }
+    /* Grid Layouts for Cards */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 8px;
-        }
+    /* --- Về Chúng Tôi: Phong cách viền trên --- */
+    .about-card {
+      background: #ffffff;
+      border: none;
+      border-top: 6px solid #1a365d;
+      border-radius: 4px;
+      padding: 30px 24px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(26, 54, 93, 0.12);
+    }
+    .about-card h3 {
+      font-size: 20px;
+      color: #1a365d;
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .about-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background-color: #ff9800;
+    }
 
-        .nav-links li { margin: 0 10px; }
+    /* --- Dịch Vụ Cung Cấp: Phong cách viền toàn khung --- */
+    .service-card {
+      background: #ffffff;
+      border: 2px solid #1a365d;
+      border-radius: 8px;
+      padding: 30px 24px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(26, 54, 93, 0.1);
+    }
+    .service-card h3 {
+      font-size: 20px;
+      color: #1a365d;
+      text-align: center;
+      margin: 0 0 15px 0;
+      font-weight: bold;
+    }
+    .service-card .subtitle {
+      font-style: italic;
+      color: #555555;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-        }
+    /* Thẻ chứa danh sách văn bản */
+    .content-list p {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.6;
+      margin: 0 0 12px 0;
+      text-align: left;
+    }
+    .content-list p:last-child {
+      margin-bottom: 0;
+    }
 
-        /* --- 3. BANNER CHÍNH (HERO) --- */
-        .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
-            color: #fff;
-            min-height: 45vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            margin-top: 80px;
-        }
+    /* Đội ngũ kỹ sư */
+    .team-info {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .team-info h4 {
+      color: #1a365d;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .team-info ul {
+      list-style: none;
+    }
+    .team-info ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+    .team-info ul li::before {
+      content: "■";
+      color: #ff9800;
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+    }
 
-        .hero h1 {
-            font-size: 1.8rem;
-            line-height: 1.3;
-            margin-bottom: 12px;
-        }
+    /* Footer / Liên Hệ */
+    footer {
+      background-color: #1a365d;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-info h3 {
+      color: #ff9800;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    .footer-info p {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    .footer-contact {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 6px;
+      min-width: 280px;
+    }
+    .footer-contact p {
+      margin-bottom: 8px;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: #a0aec0;
+    }
 
-        .hero p {
-            font-size: 1rem;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-
-        .btn {
-            background-color: #ff9800;
-            color: #fff;
-            padding: 14px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
-            font-size: 1rem;
-        }
-
-        /* --- 4. BỐ CỤC NỘI DUNG TRÊN MOBILE --- */
-        section {
-            padding: 40px 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-            scroll-margin-top: 90px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #1a365d;
-            font-size: 1.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 3px;
-            background-color: #ff9800;
-            margin: 8px auto 0;
-        }
-
-        .services-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .service-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid #1a365d;
-        }
-
-        .service-card h3 {
-            margin-bottom: 8px;
-            color: #1a365d;
-            font-size: 1.2rem;
-        }
-
-        /* Khung thông tin liên hệ đơn lẻ (Căn giữa cân đối) */
-        .contact-info {
-            background-color: #fff;
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-info h3 {
-            color: #1a365d;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #ff9800;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            font-size: 1rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .contact-info p:last-of-type { border-bottom: none; }
-
-        /* Khối gom nhóm di động & zalo 1 hàng */
-        .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            padding: 3px 8px;
-            border-radius: 4px;
-            color: white;
-        }
-        .badge-phone { background-color: #d9381e; }
-        .badge-zalo { background-color: #0068ff; }
-
-        .phone-number {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #1a365d;
-        }
-
-        /* Nút tương tác nhanh */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 25px;
-        }
-
-        .btn-action {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            color: white;
-        }
-
-        .btn-call { background-color: #d9381e; }
-        .btn-zalo { background-color: #0068ff; }
-
-        footer {
-            background-color: #1a365d;
-            color: #fff;
-            text-align: center;
-            padding: 25px 15px;
-            font-size: 0.85rem;
-            margin-bottom: 60px;
-        }
-
-        /* --- 5. THANH NÚT BẤM DƯỚI ĐÁY ĐIỆN THOẠI (STICKY BAR) --- */
-        .sticky-contact-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            padding: 10px;
-            gap: 10px;
-            z-index: 9999;
-        }
-
-        .sticky-btn {
-            flex: 1;
-            text-align: center;
-            padding: 12px;
-            border-radius: 5px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sticky-phone { background-color: #d9381e; }
-        .sticky-zalo { background-color: #0068ff; }
-
-        /* --- 6. TỰ ĐỘNG ĐỔI SANG BỐ CỤC MÁY TÍNH (PC) --- */
-        @media (min-width: 768px) {
-            body { font-size: 16px; }
-
-            .navbar {
-                flex-direction: row;
-                justify-content: space-between;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 15px 20px;
-            }
-
-            .logo { margin-bottom: 0; font-size: 1.5rem; }
-            .nav-links { width: auto; border-top: none; padding-top: 0; }
-            .nav-links li { margin-left: 20px; }
-
-            .hero { min-height: 55vh; margin-top: 60px; }
-            .hero h1 { font-size: 2.8rem; }
-
-            section { padding: 60px 20px; scroll-margin-top: 70px; }
-            .section-title { font-size: 2rem; }
-
-            .services-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-
-            .service-card {
-                border-left: none;
-                border-top: 4px solid #1a365d;
-                text-align: center;
-            }
-
-            .action-buttons { flex-direction: row; }
-            .btn-action { flex: 1; }
-
-            .sticky-contact-bar { display: none; }
-            footer { margin-bottom: 0; }
-        }
-    </style>
+    /* Responsive cho thiết bị di động */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .about-card, .service-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+      }
+      .footer-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+    <!-- Ép trình duyệt không lưu cache trang HTML chính -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- Các thẻ khác của bạn giữ nguyên -->
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">⚡ Điện Kỹ Thuật Pro</div>
-            <ul class="nav-links">
-                <li><a href="#gioi-thieu">Giới Thiệu</a></li>
-                <li><a href="#dich-vu">Dịch Vụ</a></li>
-                <li><a href="#lien-he">Liên Hệ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Dịch Vụ Kỹ Thuật Điện<br>Chuyên Nghiệp</h1>
-        <p>An toàn - Uy tín - Giải pháp tối ưu cho hệ thống điện của bạn.</p>
-        <a href="#lien-he" class="btn">Liên Hệ Ngay</a>
-    </section>
-
-    <section id="gioi-thieu">
-        <h2 class="section-title">Về Chúng Tôi</h2>
-        <p style="text-align: left; max-width: 800px; margin: 0 auto; color: #555;">
-            <b>Đội ngũ kỹ sư điện: </b>
-        </p>
-	<ul style="text-align: left; max-width: 800px; margin: 0 auto; color: #555; list-style-type: none; padding-left: 60px; text-indent: 0;">
- 	<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    	<span style="position: absolute; left: -20px; top: 10px; font-size: 8px;">&#9632;</span>
-	Tốt nghiệp đại học chuyên ngành
-	</li>
-	<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    	<span style="position: absolute; left: -20px; top: 10px; font-size: 8px;">&#9632;</span>
-	Kinh nghiệm làm việc tại các công ty TVTK hàng đầu
-	</li>
-	<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    	<span style="position: absolute; left: -20px; top: 10px; font-size: 8px;">&#9632;</span>
-	Chuyên tư vấn, thiết kế, thi công lắp đặt các hệ thống điện dân dụng, công nghiệp
-	</li>
-	<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    	<span style="position: absolute; left: -20px; top: 10px; font-size: 8px;">&#9632;</span>
-	Đảm bảo hệ thống tuân thủ tiêu chuẩn kỹ thuật, vận hành an toàn, bền bỉ, tối ưu hiệu quả đầu tư cho mọi công trình
-	</li>
-	</ul>
-	
-    </section>
-
-    <section id="dich-vu" style="background-color: #eef2f5;">
-        <h2 class="section-title">Dịch Vụ Cung Cấp</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Tư Vấn & Thiết Kế</h3>
-		<p style="text-align: left; max-width: 800px; margin: 0 auto; color: #555;">
-            	<b>Tư vấn giải pháp và thiết kế:</b>
-        	</p>
-		<ul style="text-align: left; max-width: 800px; margin: 0 auto; color: #555; list-style-type: none; padding-left: 20px; text-indent: 0;">
- 		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Hệ thống cung cấp điện từ cấp trung hạ thế
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Hệ thống an ninh điện tử
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Hệ thống điện năng lượng mặt trời
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Giải pháp Pin lưu trữ hybrid
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Giải pháp tối ưu hóa hiệu suất hệ thống điện, lọc sóng hài
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Giải pháp khởi động mềm, điều khiển động cơ điện
-		</li>
-		</ul>
-            </div>
-            <div class="service-card">
-                <h3>Thi Công & Lắp Đặt</h3>
-		<p style="text-align: left; max-width: 800px; margin: 0 auto; color: #555;">
-            	<b>Thực hiện trọn gói hoặc từng hạng mục theo hồ sơ thiết kế, đảm bảo:</b>
-        	</p>
-		<ul style="text-align: left; max-width: 800px; margin: 0 auto; color: #555; list-style-type: none; padding-left: 20px; text-indent: 0;">
- 		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Áp dụng công nghệ tiên tiến
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Tuân thủ tiêu chuẩn an toàn
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Hiệu suất tiêu thụ năng lượng, tiết kiệm chi phí vận hành
-		</li>
-		</ul>
-            </div>
-            <div class="service-card">
-                <h3>Khảo sát & Đánh giá</h3>
-		<p style="text-align: left; max-width: 800px; margin: 0 auto; color: #555;">
-            	<b>Đo đạc thực nghiệm hệ thống điện hiện hữu để đánh giá:</b>
-        	</p>
-		<ul style="text-align: left; max-width: 800px; margin: 0 auto; color: #555; list-style-type: none; padding-left: 20px; text-indent: 0;">
- 		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Mức độ an toàn tải tiêu thụ (quá nhiệt...)
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Chất lượng của dòng điện (độ méo dạng do sóng hài...)
-		</li>
-		<li style="margin-bottom: 0px; position: relative; text-indent: 0;">
-    		<span style="position: absolute; left: -20px; top: 4.5px; font-size: 12px;">&#10148;</span>
-		Tính liên tục và giá trị điện trở của hệ thống nối đất an toàn
-		</li>
-		</ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="lien-he">
-        <h2 class="section-title">Thông Tin Liên Hệ</h2>
-        
-        <div class="contact-info">
-            
-	    <p style="text-align: left; max-width: 800px; margin: 0 auto -2px auto; color: #555;">
-	    <strong>CTY TNHH VỪNG ĐÔNG</p>
-	    <p style="text-align: left; max-width: 800px; margin: 0 auto -0px auto; color: #555;">	
-	    <p>ĐC: 13/115 Trần Văn Hoàng, P. Tân Hòa, Tp.HCM</p>
-            <p><strong>Kỹ sư phụ trách:</strong> Trần Anh Duy</p>
-            
-            <p class="contact-row">
-                <span class="badge badge-phone">📱 Di động</span>
-                <span class="badge badge-zalo">💬 Zalo</span>
-                <span class="phone-number">0937.768.701</span>
-            </p>
-
-            <p><strong>Email:</strong> duytran@gmail.com</p>
-            <p><strong>Web: www.vdgee.com</p>
-            
-             
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Kỹ Thuật Điện Pro. An Toàn, Hiệu Quả.</p>
-    </footer>
-
-    <div class="sticky-contact-bar">
-        <a href="tel:0901234567" class="sticky-btn sticky-phone">📞 Gọi Điện</a>
-        <a href="https://zalo.me/0901234567" target="_blank" class="sticky-btn sticky-zalo">💬 Nhắn Zalo</a>
+  <!-- Thanh Menu Điều Hướng -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">⚡ Điện Kỹ Thuật Pro</a>
+      <ul class="nav-menu">
+        <li><a href="#about-section">Giới Thiệu</a></li>
+        <li><a href="#services-section">Dịch Vụ</a></li>
+        <li><a href="#contact-section">Liên Hệ</a></li>
+      </ul>
     </div>
+  </header>
+
+  <!-- Khu vực Banner chính (Hero) -->
+  <section class="hero" style="max-width: 100%; padding: 80px 20px;">
+    <h1>Dịch Vụ Kỹ Thuật Điện Chuyên Nghiệp</h1>
+    <p>An toàn - Uy tín - Giải pháp tối ưu cho hệ thống điện của bạn.</p>
+    <a href="#contact-section" class="btn-cta">Liên Hệ Ngay</a>
+  </section>
+
+  <!-- MỤC VỀ CHÚNG TÔI (Style mới: Chỉ viền đậm phía trên) -->
+  <section id="about-section">
+    <h2 class="section-title">Về Chúng Tôi</h2>
+    <div class="title-line"></div>
+
+    <div class="card-container">
+      <!-- Khối 1 -->
+      <div class="about-card">
+        <h3>Giải Pháp Tiên Tiến</h3>
+        <div class="content-list">
+          <p>➤ Cung cấp hệ thống điện mặt trời kết hợp lưu trữ (ESS) hiện đại.</p>
+          <p>➤ Tích hợp công nghệ quản lý tự động hóa tối ưu cho hệ thống phụ tải.</p>
+        </div>
+      </div>
+
+      <!-- Khối 2 -->
+      <div class="about-card">
+        <h3>Giá Trị Kinh Tế</h3>
+        <div class="content-list">
+          <p>➤ Giúp khách hàng chủ động kiểm soát và cắt giảm tối đa chi phí sử dụng điện.</p>
+          <p>➤ Tối ưu hóa hiệu quả đầu tư nhờ khả năng điều phối thiết bị thông minh.</p>
+        </div>
+      </div>
+
+      <!-- Khối 3 -->
+      <div class="about-card">
+        <h3>Giám Sát Thông Minh</h3>
+        <div class="content-list">
+          <p>➤ Giám sát phụ tải thông minh dựa trên quá trình thu thập dữ liệu tiêu thụ của hệ thống điện.</p>
+          <p>➤ Cảnh báo sớm các nguy cơ hao phí, rò rỉ và bảo vệ thiết bị điện an toàn.</p>
+        </div>
+      </div>
+      </div>
+  </section>
+
+  <!-- MỤC DỊCH VỤ CUNG CẤP (Giữ nguyên cấu trúc viền toàn khung đồng bộ ban đầu) -->
+  <section id="services-section" style="background-color: #f0f4f8; max-width: 100%;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Dịch Vụ Cung Cấp</h2>
+      <div class="title-line"></div>
+
+      <div class="card-container">
+        <!-- Cột Dịch Vụ 1 -->
+        <div class="service-card">
+          <h3>Tư Vấn & Thiết Kế</h3>
+          <p class="subtitle">Tư vấn giải pháp và thiết kế:</p>
+          <div class="content-list">
+            <p>➤ Hệ thống cung cấp điện từ cấp trung hạ thế</p>
+            <p>➤ Hệ thống an ninh điện tử</p>
+            <p>➤ Hệ thống điện năng lượng mặt trời</p>
+            <p>➤ Giải pháp Pin lưu trữ hybrid</p>
+            <p>➤ Giải pháp tối ưu hóa hiệu suất hệ thống điện, lọc sóng hài</p>
+            <p>➤ Giải pháp khởi động mềm, điều khiển động cơ điện</p>
+          </div>
+        </div>
+
+        <!-- Cột Dịch Vụ 2 -->
+        <div class="service-card">
+          <h3>Thi Công & Lắp Đặt</h3>
+          <p class="subtitle">Thực hiện trọn gói hoặc từng hạng mục theo hồ sơ thiết kế, đảm bảo:</p>
+          <div class="content-list">
+            <p>➤ Áp dụng công nghệ tiên tiến</p>
+            <p>➤ Tuân thủ tiêu chuẩn an toàn</p>
+            <p>➤ Hiệu suất tiêu thụ năng lượng, tiết kiệm chi phí vận hành</p>
+          </div>
+        </div>
+
+        <!-- Cột Dịch Vụ 3 -->
+        <div class="service-card">
+          <h3>Khảo sát & Đánh giá</h3>
+          <p class="subtitle">Đo đạc thực nghiệm hệ thống điện hiện hữu để đánh giá:</p>
+          <div class="content-list">
+            <p>➤ Mức độ an toàn tải tiêu thụ (quá nhiệt...)</p>
+            <p>➤ Chất lượng của dòng điện (độ méo dạng do sóng hài...)</p>
+            <p>➤ Tính liên tục và giá trị điện trở của hệ thống nối đất an toàn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MỤC THÔNG TIN LIÊN HỆ -->
+  <footer id="contact-section">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>CTY TNHH VỪNG ĐÔNG</h3>
+        <p><strong>Địa chỉ:</strong> 13/115 Trần Văn Hoàng, P. Tân Hòa, Tp.HCM</p>
+        <p><strong>Website:</strong> www.vdgee.com</p>
+      </div>
+      <div class="footer-contact">
+        <p><strong>Kỹ sư phụ trách:</strong> Trần Anh Duy</p>
+        <p>📱 <strong>Di động / Zalo:</strong> 0937.768.701</p>
+        <p>✉️ <strong>Email:</strong> duytran@gmail.com</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Kỹ Thuật Điện Pro. An Toàn, Hiệu Quả.
+    </div>
+  </footer>
 
 </body>
 </html>
