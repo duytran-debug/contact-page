@@ -1,3 +1,4 @@
+git add .
 git add CNAME
 git commit -m "Thêm CNAME giữ tên miền"
 git push origin master --force
