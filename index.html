@@ -1,361 +1,429 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO META TAGS -->
-    <title>KỸ THUẬT ĐIỆN VỪNG ĐÔNG | Cty TNHH Vừng Đông - VDGEE</title>
-    <meta name="description" content="Công ty TNHH Vừng Đông (VDGEE) chuyên tư vấn, thiết kế, thi công &amp; lắp đặt hệ thống kỹ thuật điện, điện năng lượng mặt trời, pin lưu trữ ESS và giải pháp giám sát phụ tải thông minh.">
-    <meta name="keywords" content="KỸ THUẬT ĐIỆN VỪNG ĐÔNG, CTY TNHH VỪNG ĐÔNG, vdgee, thiết kế hệ thống điện, điện năng lượng mặt trời, pin lưu trữ ESS, giám sát phụ tải">
-    <meta name="robots" content="index, follow">
-
-    <!-- Favicon chuẩn Google -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.vdgee.com/">
-    <meta property="og:title" content="KỸ THUẬT ĐIỆN VỪNG ĐÔNG - Cty TNHH Vừng Đông">
-    <meta property="og:description" content="Tư vấn, thiết kế, thi công hệ thống điện trung hạ thế, điện mặt trời &amp; giải pháp giám sát phụ tải thông minh.">
-    <meta property="og:image" content="https://www.vdgee.com/logo.png">
-
-    <!-- Schema JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Electrician",
-      "name": "CTY TNHH VỪNG ĐÔNG",
-      "alternateName": ["KỸ THUẬT ĐIỆN VỪNG ĐÔNG", "VDGEE"],
-      "url": "https://www.vdgee.com/",
-      "logo": "https://www.vdgee.com/logo.png",
-      "image": "https://www.vdgee.com/logo.png",
-      "telephone": "+84937768701",
-      "email": "duytran@vdgee.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "13/115 Trần Văn Hoàng, P. Tân Hòa",
-        "addressLocality": "Mỹ Tho",
-        "addressRegion": "Tiền Giang",
-        "countryName": "VN"
-      },
-      "priceRange": "$$"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KỸ THUẬT ĐIỆN VỪNG ĐÔNG</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    </script>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #f8fafc;
+    }
 
-    <style>
-        /* BASE & STYLES HIỆN TẠI */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-        }
-        
-        /* HEADER */
-        header {
-            background-color: #0b2545;
-            color: #fff;
-            padding: 15px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #f39c12;
-            font-weight: bold;
-            font-size: 1.2rem;
-            gap: 12px;
-        }
-        .brand img {
-            height: 40px;
-            width: auto;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: #f39c12;
-        }
+    /* Header & Navigation */
+    header {
+      background-color: #1a365d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .logo {
+      color: #ff9800;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+      color: #ff9800;
+    }
 
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(11, 37, 69, 0.75), rgba(11, 37, 69, 0.75)), url('vdg.jpg') center/cover no-repeat;
-            min-height: 320px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding: 40px 20px;
-        }
-        .hero-content h1 {
-            font-size: 2.2rem;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-        .btn-primary {
-            display: inline-block;
-            background-color: #f39c12;
-            color: #fff;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn-primary:hover {
-            background-color: #d35400;
-        }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200') no-repeat center center/cover;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #e2e8f0;
+    }
+    .btn-cta {
+      display: inline-block;
+      background-color: #ff9800;
+      color: #ffffff;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn-cta:hover {
+      background-color: #e68a00;
+    }
 
-        /* SECTIONS GENERAL */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        section h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #0b2545;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #f39c12;
-            margin: 10px auto 0;
-        }
+    /* Global Section Layout */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      color: #1a365d;
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .title-line {
+      width: 50px;
+      height: 3px;
+      background-color: #ff9800;
+      margin: 0 auto 35px auto;
+    }
 
-        /* GRIDS & CARDS */
-        .cards-grid, .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        .card, .service-item {
-            background: #fff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            border-top: 4px solid #0b2545;
-        }
-        .card h3, .service-item h3 {
-            color: #0b2545;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .card ul, .service-item ul {
-            list-style: none;
-        }
-        .card li, .service-item li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            color: #444;
-        }
-        .service-item p {
-            margin-bottom: 12px;
-            color: #666;
-            font-size: 0.9rem;
-        }
+    /* Grid Layouts for Cards */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
 
-        /* FOOTER */
-        footer {
-            background-color: #0b2545;
-            color: #ecf0f1;
-            padding: 40px 20px 20px;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        .footer-content h2 {
-            color: #fff;
-            text-align: left;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-        .footer-content h2::after {
-            display: none;
-        }
-        .footer-content a {
-            color: #f39c12;
-            text-decoration: none;
-        }
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 30px;
-            padding-top: 20px;
-            font-size: 0.85rem;
-            color: #bdc3c7;
-        }
+    /* --- Về Chúng Tôi: Phong cách viền trên --- */
+    .about-card {
+      background: #ffffff;
+      border: none;
+      border-top: 6px solid #1a365d;
+      border-radius: 4px;
+      padding: 30px 24px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(26, 54, 93, 0.12);
+    }
+    .about-card h3 {
+      font-size: 20px;
+      color: #1a365d;
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .about-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background-color: #ff9800;
+    }
 
-        /* TỐI ƯU HIỂN THỊ TRÊN ĐIỆN THOẠI (RESPONSIVE) */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-            .brand {
-                font-size: 1rem;
-            }
-            nav ul {
-                gap: 15px;
-            }
-            .hero-content h1 {
-                font-size: 1.5rem;
-            }
-            .cards-grid, .services-grid {
-                grid-template-columns: 1fr; /* Tự động xếp chồng 1 cột trên điện thoại */
-                gap: 20px;
-            }
-            section {
-                padding: 30px 15px;
-            }
-            .card, .service-item {
-                padding: 18px;
-            }
-        }
-    </style>
+    /* --- Dịch Vụ Cung Cấp: Phong cách viền toàn khung --- */
+    .service-card {
+      background: #ffffff;
+      border: 2px solid #1a365d;
+      border-radius: 8px;
+      padding: 30px 24px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(26, 54, 93, 0.1);
+    }
+    .service-card h3 {
+      font-size: 20px;
+      color: #1a365d;
+      text-align: center;
+      margin: 0 0 15px 0;
+      font-weight: bold;
+    }
+    .service-card .subtitle {
+      font-style: italic;
+      color: #555555;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    /* Thẻ chứa danh sách văn bản */
+    .content-list p {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.6;
+      margin: 0 0 12px 0;
+      text-align: left;
+    }
+    .content-list p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Đội ngũ kỹ sư */
+    .team-info {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .team-info h4 {
+      color: #1a365d;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .team-info ul {
+      list-style: none;
+    }
+    .team-info ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+    .team-info ul li::before {
+      content: "■";
+      color: #ff9800;
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+    }
+
+    /* Footer / Liên Hệ */
+    footer {
+      background-color: #1a365d;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-info h3 {
+      color: #ff9800;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    .footer-info p {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    .footer-contact {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 6px;
+      min-width: 280px;
+    }
+    .footer-contact p {
+      margin-bottom: 8px;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: #a0aec0;
+    }
+
+    /* Responsive cho thiết bị di động */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .about-card, .service-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+      }
+      .footer-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+    <!-- Ép trình duyệt không lưu cache trang HTML chính -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- Các thẻ khác của bạn giữ nguyên -->
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="nav-container">
-            <a href="/" class="brand">
-                <img src="logo.png" alt="VDGEE Logo - CTY TNHH VỪNG ĐÔNG">
-                <span>KỸ THUẬT ĐIỆN VỪNG ĐÔNG</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#gioi-thieu">Giới Thiệu</a></li>
-                    <li><a href="#dich-vu">Dịch Vụ</a></li>
-                    <li><a href="#lien-he">Liên Hệ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Thanh Menu Điều Hướng -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo"><img src="vdgee_logo.jpg" alt="VDGEE Logo" style="max-width: 120px; height: auto;"> KỸ THUẬT ĐIỆN VỪNG ĐÔNG</a>
+      <ul class="nav-menu">
+        <li><a href="#about-section">Giới Thiệu</a></li>
+        <li><a href="#services-section">Dịch Vụ</a></li>
+        <li><a href="#contact-section">Liên Hệ</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Giải Pháp Tân Tiến - An Toàn - Hiệu Quả</h1>
-            <a href="#lien-he" class="btn-primary">Liên Hệ Ngay</a>
-        </div>
-    </section>
+  <!-- Khu vực Banner chính (Hero) -->
+  <section class="hero" style="max-width: 100%; padding: 80px 20px;">
+<h1 style="font-size: 32px;">Giải Pháp Tân Tiến - An Toàn - Hiệu Quả</h1>
+    <a href="#contact-section" class="btn-cta">Liên Hệ Ngay</a>
+  </section>
 
-    <!-- About Section -->
-    <section id="gioi-thieu" class="about">
-        <h2>Về Chúng Tôi</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <h3>Giải Pháp Tiên Tiến</h3>
-                <ul>
-                    <li>➤ Cung cấp hệ thống điện mặt trời kết hợp lưu trữ (ESS) hiện đại.</li>
-                    <li>➤ Tích hợp công nghệ quản lý tự động hóa tối ưu cho hệ thống phụ tải.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Giá Trị Kinh Tế</h3>
-                <ul>
-                    <li>➤ Giúp khách hàng chủ động kiểm soát và cắt giảm tối đa chi phí sử dụng điện.</li>
-                    <li>➤ Tối ưu hóa hiệu quả đầu tư nhờ khả năng điều phối thiết bị thông minh.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Giám Sát Thông Minh</h3>
-                <ul>
-                    <li>➤ Giám sát phụ tải thông minh dựa trên quá trình thu thập dữ liệu liên tục từ hệ thống.</li>
-                    <li>➤ Cảnh báo sớm các nguy cơ hao phí, rò rỉ và bảo vệ thiết bị điện an toàn.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <!-- MỤC VỀ CHÚNG TÔI (Style mới: Chỉ viền đậm phía trên) -->
+  <section id="about-section">
+    <h2 class="section-title">Về Chúng Tôi</h2>
+    <div class="title-line"></div>
 
-    <!-- Services Section -->
-    <section id="dich-vu" class="services">
-        <h2>Dịch Vụ Cung Cấp</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <h3>Tư Vấn &amp; Thiết Kế</h3>
-                <p><em>Tư vấn giải pháp và thiết kế:</em></p>
-                <ul>
-                    <li>➤ Hệ thống cung cấp điện từ cấp trung hạ thế</li>
-                    <li>➤ Hệ thống điện năng lượng mặt trời</li>
-                    <li>➤ Giải pháp Pin lưu trữ hybrid</li>
-                    <li>➤ Giải pháp tối ưu hóa hiệu suất hệ thống điện, lọc sóng hài</li>
-                    <li>➤ Giải pháp khởi động mềm, điều khiển động cơ điện</li>
-                    <li>➤ Giải pháp thu thập dữ liệu và giám sát hệ thống</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Thi Công &amp; Lắp Đặt</h3>
-                <p><em>Thực hiện trọn gói hoặc từng hạng mục theo hồ sơ thiết kế, đảm bảo:</em></p>
-                <ul>
-                    <li>➤ Áp dụng công nghệ tiên tiến</li>
-                    <li>➤ Tuân thủ tiêu chuẩn an toàn</li>
-                    <li>➤ Tối đa hiệu suất tiêu thụ năng lượng, tiết kiệm chi phí vận hành</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Khảo Sát &amp; Đánh Giá</h3>
-                <p><em>Đo đạc thực nghiệm hệ thống điện hiện hữu để đánh giá:</em></p>
-                <ul>
-                    <li>➤ Mức độ an toàn tải tiêu thụ (quá nhiệt...)</li>
-                    <li>➤ Chất lượng của dòng điện (độ méo dạng do sóng hài...)</li>
-                    <li>➤ Tính liên tục và giá trị điện trở của hệ thống nối đất an toàn</li>
-                </ul>
-            </div>
+    <div class="card-container">
+      <!-- Khối 1 -->
+      <div class="about-card">
+        <h3>Giải Pháp Tiên Tiến</h3>
+        <div class="content-list">
+          <p>➤ Cung cấp hệ thống điện mặt trời kết hợp lưu trữ (ESS) hiện đại.</p>
+          <p>➤ Tích hợp công nghệ quản lý tự động hóa tối ưu cho hệ thống phụ tải.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Contact & Footer Section -->
-    <footer id="lien-he">
-        <div class="footer-content">
-            <h2>CTY TNHH VỪNG ĐÔNG</h2>
-            <p><strong>Địa chỉ:</strong> 13/115 Trần Văn Hoàng, P. Tân Hòa, Tp.HCM</p>
-            <p><strong>Website:</strong> <a href="https://www.vdgee.com" target="_blank">www.vdgee.com</a></p>
-            <p><strong>Kỹ sư phụ trách:</strong> Trần Anh Duy</p>
-            <p>📱 <strong>Di động / Zalo:</strong> 0937.768.701</p>
-            <p>✉️ <strong>Email:</strong> duytran@vdgee.com</p>
+      <!-- Khối 2 -->
+      <div class="about-card">
+        <h3>Giá Trị Kinh Tế</h3>
+        <div class="content-list">
+          <p>➤ Giúp khách hàng chủ động kiểm soát và cắt giảm tối đa chi phí sử dụng điện.</p>
+          <p>➤ Tối ưu hóa hiệu quả đầu tư nhờ khả năng điều phối thiết bị thông minh.</p>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 CTY TNHH Vừng Đông. Tân Tiến, An Toàn, Hiệu Quả.</p>
+      </div>
+
+      <!-- Khối 3 -->
+      <div class="about-card">
+        <h3>Giám Sát Thông Minh</h3>
+        <div class="content-list">
+          <p>➤ Giám sát phụ tải thông minh dựa trên quá trình thu thập dữ liệu liên tục từ hệ thống.</p>
+          <p>➤ Cảnh báo sớm các nguy cơ hao phí, rò rỉ và bảo vệ thiết bị điện an toàn.</p>
         </div>
-    </footer>
+      </div>
+      </div>
+  </section>
+
+  <!-- MỤC DỊCH VỤ CUNG CẤP (Giữ nguyên cấu trúc viền toàn khung đồng bộ ban đầu) -->
+  <section id="services-section" style="background-color: #f0f4f8; max-width: 100%;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Dịch Vụ Cung Cấp</h2>
+      <div class="title-line"></div>
+
+      <div class="card-container">
+        <!-- Cột Dịch Vụ 1 -->
+        <div class="service-card">
+          <h3>Tư Vấn & Thiết Kế</h3>
+          <p class="subtitle">Tư vấn giải pháp và thiết kế:</p>
+          <div class="content-list">
+            <p>➤ Hệ thống cung cấp điện từ cấp trung hạ thế</p>
+            <p>➤ Hệ thống điện năng lượng mặt trời</p>
+            <p>➤ Giải pháp Pin lưu trữ hybrid</p>
+            <p>➤ Giải pháp tối ưu hóa hiệu suất hệ thống điện, lọc sóng hài</p>
+            <p>➤ Giải pháp khởi động mềm, điều khiển động cơ điện</p>
+            <p>➤ Giải pháp thu thập dữ liệu và giám sát hệ thống</p>
+          </div>
+        </div>
+
+        <!-- Cột Dịch Vụ 2 -->
+        <div class="service-card">
+          <h3>Thi Công & Lắp Đặt</h3>
+          <p class="subtitle">Thực hiện trọn gói hoặc từng hạng mục theo hồ sơ thiết kế, đảm bảo:</p>
+          <div class="content-list">
+            <p>➤ Áp dụng công nghệ tiên tiến</p>
+            <p>➤ Tuân thủ tiêu chuẩn an toàn</p>
+            <p>➤ Tối đa hiệu suất tiêu thụ năng lượng, tiết kiệm chi phí vận hành</p>
+          </div>
+        </div>
+
+        <!-- Cột Dịch Vụ 3 -->
+        <div class="service-card">
+          <h3>Khảo sát & Đánh giá</h3>
+          <p class="subtitle">Đo đạc thực nghiệm hệ thống điện hiện hữu để đánh giá:</p>
+          <div class="content-list">
+            <p>➤ Mức độ an toàn tải tiêu thụ (quá nhiệt...)</p>
+            <p>➤ Chất lượng của dòng điện (độ méo dạng do sóng hài...)</p>
+            <p>➤ Tính liên tục và giá trị điện trở của hệ thống nối đất an toàn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MỤC THÔNG TIN LIÊN HỆ -->
+  <footer id="contact-section">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>CTY TNHH VỪNG ĐÔNG</h3>
+        <p><strong>Địa chỉ:</strong> 13/115 Trần Văn Hoàng, P. Tân Hòa, Tp.HCM</p>
+        <p><strong>Website:</strong> www.vdgee.com</p>
+      </div>
+      <div class="footer-contact">
+        <p><strong>Kỹ sư phụ trách:</strong> Trần Anh Duy</p>
+        <p>📱 <strong>Di động / Zalo:</strong> 0937.768.701</p>
+        <p>✉️ <strong>Email:</strong> duytran@vdgee.com</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 CTY TNHH Vừng Đông. Tân Tiến, An Toàn, Hiệu Quả.
+    </div>
+  </footer>
 
 </body>
 </html>
