@@ -1,0 +1,45 @@
+Hoàn toàn thực hiện được và rất dễ dàng! Đây là cách làm chuẩn để tích hợp công cụ này vào website của bạn.
+
+Các bước thực hiện:
+
+Tạo trang HTML tính toán:
+
+Tạo một file mới tên là radiant.html (hoặc tinh-buc-xa.html) đặt cùng thư mục D:\web\ với file index.html.
+
+Viết giao diện và mã JavaScript xử lý công thức tính bức xạ mặt trời trực tiếp trong file này.
+
+Thêm đường dẫn vào index.html:
+
+Mở index.html, thêm một nút hoặc liên kết chuyển hướng sang trang tính toán.
+
+Ví dụ dán vào phần Dịch Vụ hoặc Menu:
+
+HTML
+<a href="radiant.html" class="btn-primary">Công Cụ Tính Bức Xạ Mặt Trời</a>
+Host lên GitHub Pages:
+
+Push toàn bộ thư mục web (gồm index.html, radiant.html, logo.png, favicon.png...) lên một Repository trên GitHub.
+
+Vào Settings > Pages của Repository đó, chọn nhánh main (hoặc master) và lưu lại.
+
+Cấu hình tên miền tùy chỉnh vdgee.com trong mục Custom domain của GitHub Pages là trang web sẽ tự động chạy mượt mà cả trang chủ lẫn trang công cụ mới.
+
+Các yếu tố giúp tăng uy tín cho trang index.html
+Trở thành Linkable Asset (Tài nguyên thu hút liên kết): Các kỹ sư, đơn vị tư vấn thiết kế hoặc khách hàng tìm kiếm công cụ tính toán sẽ sử dụng và chia sẻ đường dẫn trang radiant.html. Việc có nhiều lưu lượng truy cập (Traffic) từ ngoài vào trang con sẽ kéo chỉ số uy tín (Domain Authority) của toàn bộ tên miền lên.
+
+Tăng thời gian ở lại trang (Dwell Time): Khách hàng vào trang để nhập thông số và xem kết quả tính toán sẽ ở lại web lâu hơn. Google Bot đánh giá đây là dấu hiệu cho thấy trang web cung cấp thông tin hữu ích, từ đó cải thiện thứ hạng SEO.
+
+Định vị chuyên môn cho thương hiệu (E-E-A-T): Thay vì chỉ giới thiệu dịch vụ chung chung, việc cung cấp công cụ tính toán kỹ thuật giúp khẳng định Cty TNHH Vừng Đông có năng lực chuyên môn thực tế trong ngành điện mặt trời và pin lưu trữ ESS.
+
+Tăng tỷ lệ chuyển đổi (Conversion Rate): Sau khi người dùng tính toán xong lượng bức xạ và sản lượng điện dự kiến trên trang radiant.html, bạn đặt ngay một nút [Nhận Báo Giá / Tư Vấn Chi Tiết] trỏ về phần Liên hệ của trang index.html. Khách hàng sẽ dễ dàng để lại thông tin hơn.
+
+Lưu ý kỹ thuật để đạt hiệu quả tối đa
+Chỉ số SEO trên trang radiant.html: Thêm đầy đủ thẻ <title>, <meta description> với từ khóa như "Công cụ tính bức xạ mặt trời", "Tính sản lượng điện mặt trời Online".
+
+Liên kết 2 chiều (Internal Link):
+
+Trong index.html: Đặt nút dẫn sang radiant.html.
+
+Trong radiant.html: Cần có thanh Header/Footer dẫn ngược lại trang chủ vdgee.com để giữ chân người dùng.
+
+Cấu hình GitHub Pages: Khi đưa lên GitHub, nhớ khai báo đúng tên miền vdgee.com trong cài đặt Custom Domain để đường dẫn trang công cụ dạng [vdgee.com/radiant.html](https://vdgee.com/radiant.html) thay vì đường dẫn GitHub mặc định.
