@@ -1,5 +1,10 @@
 https://github.com/duytran-debug/contact-page/settings/pages
 
+
+git add .
+git commit -m "Cập nhật giao diện giải pháp"
+git push origin master
+------------
 git add .
 git commit -m "Thêm CNAME giữ tên miền"
 git push
