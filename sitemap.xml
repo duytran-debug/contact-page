@@ -8,4 +8,12 @@
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
+<!-- Trang Landing Page Giải Pháp Hybrid 6kW -->
+  <url>
+    <loc>https://vdgee.com/giai-phap-hybrid-6kw.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
