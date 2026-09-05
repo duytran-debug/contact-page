@@ -364,144 +364,82 @@
   </section>
 
 <!-- START_SOLUTION_SECTION -->
-<style>
-    /* Style cơ bản */
-    .hybrid-solution-section {
-        padding: 40px 15px;
-        background-color: #ffffff;
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
-    .solution-card {
-        width: 100%;
-        max-width: 900px;
-        background-color: #0b1a2b;
-        border-radius: 12px;
-        padding: 25px 30px;
-        border: 1px solid #1e3a5f;
-        border-top: 4px solid #10b981;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 25px;
-        flex-wrap: wrap;
-    }
-    .card-left-content {
-        flex: 1;
-        min-width: 280px;
-    }
-    .card-right-action {
-        background: linear-gradient(135deg, #132a42 0%, #0e2034 100%);
-        border: 1px solid #1e4976;
-        border-radius: 10px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        min-width: 230px;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    /* Tối ưu riêng cho màn hình điện thoại (< 768px) */
-    @media (max-width: 768px) {
-        .hybrid-solution-section {
-            padding: 20px 10px;
-        }
-        .solution-card {
-            padding: 20px 15px;
-            gap: 20px;
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .card-left-content {
-            min-width: 100%;
-        }
-        .card-header h3 {
-            font-size: 19px !important;
-        }
-        .card-right-action {
-            width: 100%;
-            min-width: 100%;
-            align-self: stretch;
-        }
-    }
-</style>
-
-<section class="hybrid-solution-section">
+<section class="hybrid-solution-section" style="padding: 40px 20px; background-color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
     <div class="container" style="max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
         
-        <section id="about-section" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-            <h2 class="section-title">Giải Pháp Điện Năng Lượng Mặt Trời</h2>
-            <div class="title-line"></div>
+       <section id="about-section">
+    <h2 class="section-title">Giải Pháp Điện Năng Lượng Mặt Trời</h2>
+    <div class="title-line"></div>
 
-            <!-- THẺ CARD GIẢI PHÁP -->
-            <div class="solution-card">
-                
-                <!-- CỘT BÊN TRÁI: THÔNG TIN CHI TIẾT COMBO -->
-                <div class="card-left-content">
-                    <div style="margin-bottom: 12px;">
-                        <span style="background-color: #10b981; color: #ffffff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block;">
-                            ★ COMBO ĐÁNG ĐỒNG TIỀN BÁT GẠO CỦA NĂM 2026
-                        </span>
-                    </div>
 
-                    <div class="card-header" style="margin-bottom: 15px;">
-                        <h3 style="color: #00a2ff; font-size: 22px; margin: 0 0 10px 0; font-weight: 700; line-height: 1.3; letter-spacing: -0.2px;">
-                            Combo Hybrid 6kW & Pin Lưu Trữ 16.08kWh
-                        </h3>
-                        <p class="subtitle" style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">
-                            Cấu hình xả dầy – lưu trữ lớn từ bộ đôi 
-                            <strong style="color: #f8fafc;">Senergy 6kW ECO II</strong> & 
-                            <strong style="color: #f8fafc;">Pin Lithium Ecopower EP-314 PRO</strong>. Tự chủ nguồn điện, tối ưu chi phí.
-                        </p>
-                    </div>
+        <!-- THẺ CARD GIẢI PHÁP (NỀN XANH ĐEN TỐI) -->
+<div class="solution-card" style="width: 100%; max-width: 900px; background-color: #0b1a2b; border-radius: 12px; padding: 25px 30px; border: 1px solid #1e3a5f; border-top: 4px solid #10b981; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 25px; flex-wrap: wrap;">
+    
+    <!-- CỘT BÊN TRÁI: THÔNG TIN CHI TIẾT COMBO -->
+    <div class="card-left-content" style="flex: 1; min-width: 300px;">
+        <!-- BADGE KHUYẾN MÃI -->
+        <div style="margin-bottom: 12px;">
+            <span style="background-color: #10b981; color: #ffffff; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block;">
+                ★ COMBO ĐÁNG ĐỒNG TIỀN BÁT GẠO CỦA NĂM 2026
+            </span>
+        </div>
 
-                    <div class="card-body">
-                        <ul class="feature-list" style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                                <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
-                                <strong>Lưu trữ thực tế:</strong> ~12.8 kWh/ngày
-                            </li>
-                            <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                                <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
-                                <strong>Bảo hành thiết bị:</strong> 5 năm
-                            </li>
-                            <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                                <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
-                                <strong>Dự phòng mất điện:</strong> Chạy tải 2kW liên tục trong 6 – 6.5 tiếng
-                            </li>
-                            <li style="margin-bottom: 0; color: #cbd5e1; font-size: 14px; line-height: 1.5;">
-                                <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
-                                <strong>Hiệu quả kinh tế:</strong> Tiết kiệm ~14.6 triệu VNĐ/năm
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="card-header" style="margin-bottom: 15px;">
+            <h3 style="color: #00a2ff; font-size: 22px; margin: 0 0 10px 0; font-weight: 700; line-height: 1.3; letter-spacing: -0.2px;">
+                Combo Hybrid 6kW & Pin Lưu Trữ 16.08kWh
+            </h3>
+            <p class="subtitle" style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin: 0;">
+                Cấu hình xả dầy – lưu trữ lớn từ bộ đôi 
+                <strong style="color: #f8fafc;">Senergy 6kW ECO II</strong> & 
+                <strong style="color: #f8fafc;">Pin Lithium Ecopower EP-314 PRO</strong>. Tự chủ nguồn điện, tối ưu chi phí.
+            </p>
+        </div>
 
-                <!-- CỘT BÊN PHẢI: KHUNG GIÁ BÁN & NÚT -->
-                <div class="card-right-action">
-                    <div class="price-box" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-                        <span class="price-label" style="font-size: 12px; color: #94a3b8; text-transform: uppercase; font-weight: 600; margin-bottom: 6px; letter-spacing: 0.5px;">
-                            Tổng Chi Phí Thiết Bị
-                        </span>
-                        <span class="price-value" style="font-size: 24px; color: #10b981; font-weight: 800; line-height: 1.2;">
-                            63.990.000 đ
-                        </span>
-                    </div>
-
-                    <a href="giai-phap-hybrid-6kw.html" class="btn-detail" style="background-color: #10b981; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14.5px; display: inline-block; width: 100%; box-sizing: border-box; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); margin-top: 15px; text-align: center;">
-                        Xem Chi Tiết →
-                    </a>
-                </div>
-
-            </div>
-        </section>
+        <div class="card-body">
+            <ul class="feature-list" style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14.5px; line-height: 1.5;">
+                    <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
+                    <strong>Lưu trữ thực tế:</strong> ~12.8 kWh/ngày
+                </li>
+                <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14.5px; line-height: 1.5;">
+                    <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
+                    <strong>Bảo hành thiết bị:</strong> 5 năm
+                </li>
+                <li style="margin-bottom: 8px; color: #cbd5e1; font-size: 14.5px; line-height: 1.5;">
+                    <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
+                    <strong>Dự phòng mất điện:</strong> Chạy tải 2kW liên tục trong 6 – 6.5 tiếng
+                </li>
+                <li style="margin-bottom: 0; color: #cbd5e1; font-size: 14.5px; line-height: 1.5;">
+                    <span style="color: #10b981; font-weight: bold; margin-right: 8px;">✓</span>
+                    <strong>Hiệu quả kinh tế:</strong> Tiết kiệm ~14.6 triệu VNĐ/năm
+                </li>
+            </ul>
+        </div>
     </div>
-</section>
-<!-- END_SOLUTION_SECTION -->
+
+    <!-- CỘT BÊN PHẢI: KHUNG GIÁ BÁN & NÚT (CĂN LỀ TRÊN KHÔNG CAO HƠN DÒNG COMBO) -->
+<div class="card-right-action" style="background: linear-gradient(135deg, #132a42 0%, #0e2034 100%); border: 1px solid #1e4976; border-radius: 10px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-width: 230px; text-align: center; align-self: flex-end; width: 260px; box-sizing: border-border-box;">
+    
+    <div class="price-box" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <span class="price-label" style="font-size: 13px; color: #94a3b8; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px;">
+            Tổng Chi Phí Thiết Bị
+        </span>
+        <span class="price-value" style="font-size: 24px; color: #10b981; font-weight: 800; line-height: 1.2;">
+            63.990.000 đ
+        </span>
+    </div>
+
+    <a href="giai-phap-hybrid-6kw.html" class="btn-detail" style="background-color: #10b981; color: #ffffff; padding: 11px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14.5px; display: inline-block; width: 100%; box-sizing: border-box; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); margin-top: 20px;">
+        Xem Chi Tiết →
+    </a>
+
+</div>
+
+</div>
+
+        </div>
+    </div>
+</section><!-- END_SOLUTION_SECTION -->
 
   <!-- MỤC VỀ CHÚNG TÔI (Style mới: Chỉ viền đậm phía trên) -->
   <section id="about-section">
